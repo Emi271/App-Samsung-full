@@ -1,6 +1,6 @@
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import {colores} from '../global/colores'
-import Productos from '../data/Productos.json'
+import CategoriasData from '../data/CategoriasData.json'
 
 const Categorias = ({onSelectedCategoyEvent}) => {
 
@@ -15,8 +15,8 @@ const Categorias = ({onSelectedCategoyEvent}) => {
       <Text style={styles.CategoriasTitulo}>Categorias</Text>
       <FlatList 
       renderItem={mostrarCategorias}
-      keyExtractor={item => item}
-      data={Productos}/>
+      keyExtractor={(item) => item}
+      data={CategoriasData}/>
     </View>
   )
 }

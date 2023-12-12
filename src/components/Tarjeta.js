@@ -1,20 +1,20 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
-import Products from '../data/Productos.json'
 
-const Tarjeta = () => {
+const Tarjeta = ({
+  producto, onProductoSeleccionadoEvent
+}) => {
   return (
-    <View style={styles.TarjetaContainer}>
-      <Image style={styles.TarjetaImagen} source={Products.ImgMiniatura}/>
-      <Text style={styles.TarjetaTitulo}>{Products.nombre}</Text>
-      <Text style={styles.TarjetaTexto}>{Products.precio}</Text>
-      <TouchableOpacity />
-    </View>
-  )
-}
+    <TouchableOpacity onPress={()=> onProductoSeleccionadoEvent(producto.id)} style={styles.TarjetaContainer}>
+      <Image style={styles.TarjetaImagen} source={{url:producto.ImgMiniatura}}/>
+      <Text style={styles.TarjetaTitulo}>{producto.nombre}</Text>
+      <Text style={styles.TarjetaTexto}>{producto.precio}</Text>
+    </TouchableOpacity> )}
 
 export default Tarjeta
 
 const styles = StyleSheet.create({
-  
+  TarjetaContainer: {
+
+  }
 })
