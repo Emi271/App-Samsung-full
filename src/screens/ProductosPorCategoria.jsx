@@ -29,9 +29,19 @@ export default ProductosPorCategoria
 
 const styles = StyleSheet.create({
   ProductosContainer: {
-    flex:1,
+    flex: 2,
     alignContent: 'center',
     alignItems: 'center',
-    backgroundColor: colores.Lila
-  }
+    justifyContent: 'center',
+    backgroundColor: colores.Lila,
+    width: '100%',
+    height: '100%'
+  },
+  ProductosTítulo: {
+    color: colores.Lily,
+    fontSize: 20,
+    fontFamily: 'Quicksand-Light',
+    marginTop: 30
+  },
+ 
 })

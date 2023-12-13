@@ -13,16 +13,11 @@ const [productoSeleccionado, setProductoSeleccionado] = useState(null)
 
   useFonts({
     'Quicksand-Light': require('./assets/Quicksand-Light.ttf'),
-    'Quicksand-Medium': require('./assets/Quicksand-Medium.ttf'),
-    'Quicksand-Regular': require('./assets/Quicksand-Regular.ttf')
-  })
-const onSelectedCategory = (categoria) => {
-  setCategorySelected(categoria)
-  console.log("Categoría seleccionada:  ",categoria)
-}
-const onProductoSeleccionado = (productoID) => {
-  setProductoSeleccionado(productoID)
-}
+    'Quicksand-Regular': require('./assets/Quicksand-Regular.ttf')})
+    
+const onSelectedCategory = (categoria) => { setCategorySelected(categoria) }
+const onProductoSeleccionado = (productoID) => { setProductoSeleccionado(productoID) }
+
   return (
      <View style={styles.container}>
       <StatusBar style="auto" />
@@ -35,7 +30,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colores.Fondo,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+  }})

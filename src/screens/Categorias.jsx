@@ -5,8 +5,8 @@ import CategoriasData from '../data/CategoriasData.json'
 const Categorias = ({onSelectedCategoyEvent}) => {
 
   const mostrarCategorias = ({item}) => (
-    <TouchableOpacity  onPress={() => onSelectedCategoyEvent(item)}>
-      <Text style={styles.Texto}>{item}</Text>
+    <TouchableOpacity style={styles.BotonCategoria} onPress={() => onSelectedCategoyEvent(item)}>
+      <Text style={styles.BotonCategoriaTexto}>{item}</Text>
     </TouchableOpacity>
   )
 
@@ -24,8 +24,30 @@ const Categorias = ({onSelectedCategoyEvent}) => {
 export default Categorias
 
 const styles = StyleSheet.create({
+  CategoriasContainer: {
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
+    height: '100%'
+  },
   CategoriasTitulo: {
-    color: colores.Lily
+    color: colores.Lily,
+    fontSize: 30,
+    fontFamily: 'Quicksand-Light',
+    marginTop: 30
+  },
+  BotonCategoria: {
+    backgroundColor: colores.RosaClaro,
+    borderRadius: 25,
+    padding: 10,
+    margin: 10,
+    alignItems: 'center'
+  },
+  BotonCategoriaTexto: {
+    fontFamily: 'Quicksand-Regular',
+    fontSize: 24,
+    color: colores.Fucsia
   }
 
 })
